@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9917B3AE232118EF00234163 /* arrow2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9917B3AD232118EF00234163 /* arrow2.png */; };
+		9917B3B0232119DC00234163 /* arrow1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9917B3AF232119DC00234163 /* arrow1.png */; };
 		99695F30231FB21F00206BBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99695F2F231FB21F00206BBF /* AppDelegate.swift */; };
 		99695F32231FB21F00206BBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99695F31231FB21F00206BBF /* ViewController.swift */; };
 		99695F35231FB21F00206BBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99695F33231FB21F00206BBF /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9917B3AD232118EF00234163 /* arrow2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow2.png; sourceTree = "<group>"; };
+		9917B3AF232119DC00234163 /* arrow1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow1.png; sourceTree = "<group>"; };
 		99695F2C231FB21F00206BBF /* snakes-and-ladders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "snakes-and-ladders.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99695F2F231FB21F00206BBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99695F31231FB21F00206BBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 				99695F31231FB21F00206BBF /* ViewController.swift */,
 				99695F33231FB21F00206BBF /* Main.storyboard */,
 				99695F39231FB22000206BBF /* Assets.xcassets */,
+				9917B3AD232118EF00234163 /* arrow2.png */,
+				9917B3AF232119DC00234163 /* arrow1.png */,
 				99695F3B231FB22000206BBF /* LaunchScreen.storyboard */,
 				99695F3E231FB22000206BBF /* Info.plist */,
 				99695F36231FB21F00206BBF /* snakes_and_ladders.xcdatamodeld */,
@@ -126,8 +132,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				99695F3D231FB22000206BBF /* LaunchScreen.storyboard in Resources */,
+				9917B3B0232119DC00234163 /* arrow1.png in Resources */,
 				99695F3A231FB22000206BBF /* Assets.xcassets in Resources */,
 				99695F35231FB21F00206BBF /* Main.storyboard in Resources */,
+				9917B3AE232118EF00234163 /* arrow2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
