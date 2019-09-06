@@ -574,11 +574,12 @@ class ViewController: UIViewController {
     //changes dice one image 1-6
     @objc func diceOneImageChange(){
         
-        //print("redCounterOld=", redCounterOld)
+        //print("redCounterOld=", redCounterOld+1)
         redArray[redCounterOld].isHidden = true
         
         let randomNumber = Int(arc4random_uniform(UInt32(6)))
         playerOneDice.image = UIImage(named: "\(randomNumber+1)dice")
+        
         if playerOneDice.image == UIImage(named: "1dice"){
             redCounter = redCounter + 1
         } else if playerOneDice.image == UIImage(named: "2dice"){
@@ -593,11 +594,19 @@ class ViewController: UIViewController {
             redCounter = redCounter + 6
         }
         
-        
-        //print("redcounter = ",redCounter)
-        redArray[redCounter-1].isHidden = false
-        redCounterOld = redCounter-1
-        
+        if redCounter > 99 {
+            redCounter = redCounterOld
+            //print("if red counter > 100 then red counter = ", redCounter+1)
+            redArray[redCounter].isHidden = false
+        } else if redCounter == 99 {
+            //print("player 1 won", redCounter)
+            redArray[99].isHidden = false
+        }
+        else{
+            //print("redCounter = ", redCounter)
+            redArray[redCounter-1].isHidden = false
+            redCounterOld = redCounter-1
+        }
 
     }
     
