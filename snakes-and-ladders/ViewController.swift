@@ -431,7 +431,9 @@ class ViewController: UIViewController {
     
     
     
-    
+    var redCounter = 0
+    var redCounterOld = 0
+    var redArray = [UIImageView]()
     
     
     
@@ -454,14 +456,148 @@ class ViewController: UIViewController {
         hideBlueImages()
         hideGreenImages()
         hideYellowImages()
+        
+        // addd redimage to redArray
+        redArray.append(red1)
+        redArray.append(red2)
+        redArray.append(red3)
+        redArray.append(red4)
+        redArray.append(red5)
+        redArray.append(red6)
+        redArray.append(red7)
+        redArray.append(red8)
+        redArray.append(red9)
+        redArray.append(red10)
+        redArray.append(red11)
+        redArray.append(red12)
+        redArray.append(red13)
+        redArray.append(red14)
+        redArray.append(red15)
+        redArray.append(red16)
+        redArray.append(red17)
+        redArray.append(red18)
+        redArray.append(red19)
+        redArray.append(red20)
+        redArray.append(red21)
+        redArray.append(red22)
+        redArray.append(red23)
+        redArray.append(red24)
+        redArray.append(red25)
+        redArray.append(red26)
+        redArray.append(red27)
+        redArray.append(red28)
+        redArray.append(red29)
+        redArray.append(red30)
+        redArray.append(red31)
+        redArray.append(red32)
+        redArray.append(red33)
+        redArray.append(red34)
+        redArray.append(red35)
+        redArray.append(red36)
+        redArray.append(red37)
+        redArray.append(red38)
+        redArray.append(red39)
+        redArray.append(red40)
+        redArray.append(red41)
+        redArray.append(red42)
+        redArray.append(red43)
+        redArray.append(red44)
+        redArray.append(red45)
+        redArray.append(red46)
+        redArray.append(red47)
+        redArray.append(red48)
+        redArray.append(red49)
+        redArray.append(red50)
+        redArray.append(red51)
+        redArray.append(red52)
+        redArray.append(red53)
+        redArray.append(red54)
+        redArray.append(red55)
+        redArray.append(red56)
+        redArray.append(red57)
+        redArray.append(red58)
+        redArray.append(red59)
+        redArray.append(red60)
+        redArray.append(red61)
+        redArray.append(red62)
+        redArray.append(red63)
+        redArray.append(red64)
+        redArray.append(red65)
+        redArray.append(red66)
+        redArray.append(red67)
+        redArray.append(red68)
+        redArray.append(red69)
+        redArray.append(red70)
+        redArray.append(red71)
+        redArray.append(red72)
+        redArray.append(red73)
+        redArray.append(red74)
+        redArray.append(red75)
+        redArray.append(red76)
+        redArray.append(red77)
+        redArray.append(red78)
+        redArray.append(red79)
+        redArray.append(red80)
+        redArray.append(red81)
+        redArray.append(red82)
+        redArray.append(red83)
+        redArray.append(red84)
+        redArray.append(red85)
+        redArray.append(red86)
+        redArray.append(red87)
+        redArray.append(red88)
+        redArray.append(red89)
+        redArray.append(red90)
+        redArray.append(red91)
+        redArray.append(red92)
+        redArray.append(red93)
+        redArray.append(red94)
+        redArray.append(red95)
+        redArray.append(red96)
+        redArray.append(red97)
+        redArray.append(red98)
+        redArray.append(red99)
+        redArray.append(red100)
+
+
+
+
+
+
+
+
+
+        
 
     }
 
     //changes dice one image 1-6
     @objc func diceOneImageChange(){
         
+        //print("redCounterOld=", redCounterOld)
+        redArray[redCounterOld].isHidden = true
+        
         let randomNumber = Int(arc4random_uniform(UInt32(6)))
         playerOneDice.image = UIImage(named: "\(randomNumber+1)dice")
+        if playerOneDice.image == UIImage(named: "1dice"){
+            redCounter = redCounter + 1
+        } else if playerOneDice.image == UIImage(named: "2dice"){
+            redCounter = redCounter + 2
+        } else if playerOneDice.image == UIImage(named: "3dice"){
+            redCounter = redCounter + 3
+        } else if playerOneDice.image == UIImage(named: "4dice"){
+            redCounter = redCounter + 4
+        } else if playerOneDice.image == UIImage(named: "5dice"){
+            redCounter = redCounter + 5
+        } else if playerOneDice.image == UIImage(named: "6dice"){
+            redCounter = redCounter + 6
+        }
+        
+        
+        //print("redcounter = ",redCounter)
+        redArray[redCounter-1].isHidden = false
+        redCounterOld = redCounter-1
+        
 
     }
     
