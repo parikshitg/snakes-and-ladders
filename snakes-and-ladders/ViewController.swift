@@ -728,9 +728,12 @@ class ViewController: UIViewController {
             redCounter = 43
             redArray[redCounter - 1].isHidden = false
             redCounterOld = redCounter - 1
-            
-        }
-        else {
+        } else if redCounter == 12 {
+            redArray[11].isHidden = true
+            redCounter = 92
+            redArray[redCounter - 1].isHidden = false
+            redCounterOld = redCounter - 1
+        } else {
             print("redCounter = ", redCounter)
             redArray[redCounter-1].isHidden = false
             redCounterOld = redCounter-1
@@ -795,6 +798,11 @@ class ViewController: UIViewController {
             blueArray[blueCounter - 1].isHidden = false
             blueCounterOld = blueCounter - 1
             
+        } else if blueCounter == 12 {
+            blueArray[11].isHidden = true
+            blueCounter = 92
+            blueArray[blueCounter - 1].isHidden = false
+            blueCounterOld = blueCounter - 1
         } else {
             print("blueCOunter = ", blueCounter)
             blueArray[blueCounter - 1].isHidden = false
