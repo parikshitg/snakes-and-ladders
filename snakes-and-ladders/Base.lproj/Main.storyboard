@@ -2060,6 +2060,10 @@
                                 <rect key="frame" x="191" y="269" width="22" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ladder1" translatesAutoresizingMaskIntoConstraints="NO" id="xDN-Nq-XVd">
+                                <rect key="frame" x="97" y="339" width="25" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -2583,6 +2587,7 @@
         <image name="arrow2.png" width="300" height="300"/>
         <image name="blue" width="48" height="48"/>
         <image name="green" width="48" height="48"/>
+        <image name="ladder1" width="55.200000762939453" height="96.720001220703125"/>
         <image name="red" width="48" height="48"/>
         <image name="snake1" width="126.72000122070312" height="111.83999633789062"/>
         <image name="snake2" width="50.400001525878906" height="48"/>
