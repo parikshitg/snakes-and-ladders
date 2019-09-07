@@ -705,13 +705,20 @@ class ViewController: UIViewController {
             redArray[redCounter].isHidden = false
         } else if redCounter == 99 {
             print("player 1 won", redCounter)
+            redArray[blueCounter].isHidden = false
+            redCounterOld = 99
             let alert = UIAlertController(title: "WON", message: "PLayer 1 Won", preferredStyle: UIAlertController.Style.alert)
             let ok = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
             alert.addAction(ok)
             self.present(alert, animated: true, completion: nil)
             redArray[99].isHidden = false
-        }
-        else{
+        } else if redCounter == 51 {
+            redArray[50].isHidden = true               //hide blue 51
+            redCounter = 30                            //change blueCounter to 30
+            redArray[redCounter - 1].isHidden = false
+            redCounterOld = redCounter - 1
+            
+        } else{
             print("redCounter = ", redCounter)
             redArray[redCounter-1].isHidden = false
             redCounterOld = redCounter-1
