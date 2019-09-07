@@ -770,6 +770,7 @@ class ViewController: UIViewController {
             let ok = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
             alert.addAction(ok)
             self.present(alert, animated: true, completion: nil)
+            blueArray[99].isHidden = false
         } else if blueCounter == 51 {
             blueArray[50].isHidden = true               //hide blue 51
             blueCounter = 30                            //change blueCounter to 30
