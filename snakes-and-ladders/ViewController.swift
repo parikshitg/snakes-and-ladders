@@ -435,6 +435,9 @@ class ViewController: UIViewController {
     var redCounterOld = 0
     var redArray = [UIImageView]()
     
+    var blueCounter = 0
+    var blueCounterOld = 0
+    var blueArray = [UIImageView]()
     
     
     override func viewDidLoad() {
@@ -560,8 +563,108 @@ class ViewController: UIViewController {
         redArray.append(red100)
 
 
-
-
+        //adding blue images to blue array
+        blueArray.append(blue1)
+        blueArray.append(blue2)
+        blueArray.append(blue3)
+        blueArray.append(blue4)
+        blueArray.append(blue5)
+        blueArray.append(blue6)
+        blueArray.append(blue7)
+        blueArray.append(blue8)
+        blueArray.append(blue9)
+        blueArray.append(blue10)
+        blueArray.append(blue11)
+        blueArray.append(blue12)
+        blueArray.append(blue13)
+        blueArray.append(blue14)
+        blueArray.append(blue15)
+        blueArray.append(blue16)
+        blueArray.append(blue17)
+        blueArray.append(blue18)
+        blueArray.append(blue19)
+        blueArray.append(blue20)
+        blueArray.append(blue21)
+        blueArray.append(blue22)
+        blueArray.append(blue23)
+        blueArray.append(blue24)
+        blueArray.append(blue25)
+        blueArray.append(blue26)
+        blueArray.append(blue27)
+        blueArray.append(blue28)
+        blueArray.append(blue29)
+        blueArray.append(blue30)
+        blueArray.append(blue31)
+        blueArray.append(blue32)
+        blueArray.append(blue33)
+        blueArray.append(blue34)
+        blueArray.append(blue35)
+        blueArray.append(blue36)
+        blueArray.append(blue37)
+        blueArray.append(blue38)
+        blueArray.append(blue39)
+        blueArray.append(blue40)
+        blueArray.append(blue41)
+        blueArray.append(blue42)
+        blueArray.append(blue43)
+        blueArray.append(blue44)
+        blueArray.append(blue45)
+        blueArray.append(blue46)
+        blueArray.append(blue47)
+        blueArray.append(blue48)
+        blueArray.append(blue49)
+        blueArray.append(blue50)
+        blueArray.append(blue51)
+        blueArray.append(blue52)
+        blueArray.append(blue53)
+        blueArray.append(blue54)
+        blueArray.append(blue55)
+        blueArray.append(blue56)
+        blueArray.append(blue57)
+        blueArray.append(blue58)
+        blueArray.append(blue59)
+        blueArray.append(blue60)
+        blueArray.append(blue61)
+        blueArray.append(blue62)
+        blueArray.append(blue63)
+        blueArray.append(blue64)
+        blueArray.append(blue65)
+        blueArray.append(blue66)
+        blueArray.append(blue67)
+        blueArray.append(blue68)
+        blueArray.append(blue69)
+        blueArray.append(blue70)
+        blueArray.append(blue71)
+        blueArray.append(blue72)
+        blueArray.append(blue73)
+        blueArray.append(blue74)
+        blueArray.append(blue75)
+        blueArray.append(blue76)
+        blueArray.append(blue77)
+        blueArray.append(blue78)
+        blueArray.append(blue79)
+        blueArray.append(blue80)
+        blueArray.append(blue81)
+        blueArray.append(blue82)
+        blueArray.append(blue83)
+        blueArray.append(blue84)
+        blueArray.append(blue85)
+        blueArray.append(blue86)
+        blueArray.append(blue87)
+        blueArray.append(blue88)
+        blueArray.append(blue89)
+        blueArray.append(blue90)
+        blueArray.append(blue91)
+        blueArray.append(blue92)
+        blueArray.append(blue93)
+        blueArray.append(blue94)
+        blueArray.append(blue95)
+        blueArray.append(blue96)
+        blueArray.append(blue97)
+        blueArray.append(blue98)
+        blueArray.append(blue99)
+        blueArray.append(blue100)
+        
 
 
 
@@ -574,7 +677,9 @@ class ViewController: UIViewController {
     //changes dice one image 1-6
     @objc func diceOneImageChange(){
         
-        //print("redCounterOld=", redCounterOld+1)
+        arrow2.isHidden = true
+        
+        print("redCounterOld=", redCounterOld+1)
         redArray[redCounterOld].isHidden = true
         
         let randomNumber = Int(arc4random_uniform(UInt32(6)))
@@ -596,26 +701,72 @@ class ViewController: UIViewController {
         
         if redCounter > 99 {
             redCounter = redCounterOld
-            //print("if red counter > 100 then red counter = ", redCounter+1)
+            print("if red counter > 100 then red counter = ", redCounter+1)
             redArray[redCounter].isHidden = false
         } else if redCounter == 99 {
-            //print("player 1 won", redCounter)
+            print("player 1 won", redCounter)
+            let alert = UIAlertController(title: "WON", message: "PLayer 1 Won", preferredStyle: UIAlertController.Style.alert)
+            let ok = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
             redArray[99].isHidden = false
         }
         else{
-            //print("redCounter = ", redCounter)
+            print("redCounter = ", redCounter)
             redArray[redCounter-1].isHidden = false
             redCounterOld = redCounter-1
         }
+        
+        arrow1.isHidden = true
+        arrow2.isHidden = false
 
     }
     
     //changes dice two image 1-6
     @objc func diceTwoImageChange(){
         
+        arrow1.isHidden = true
+        
+        print("blueCounterOLD =", blueCounterOld + 1)
+        blueArray[blueCounterOld].isHidden = true
+        
         let randomNumber = Int(arc4random_uniform(UInt32(6)))
         playerTwoDice.image = UIImage(named: "\(randomNumber+1)dice")
-
+        
+        if playerTwoDice.image == UIImage(named: "1dice") {
+            blueCounter = blueCounter + 1
+        } else if playerTwoDice.image == UIImage(named: "2dice") {
+            blueCounter = blueCounter + 2
+        } else if playerTwoDice.image == UIImage(named: "3dice") {
+            blueCounter = blueCounter + 3
+        } else if playerTwoDice.image == UIImage(named: "4dice") {
+            blueCounter = blueCounter + 4
+        } else if playerTwoDice.image == UIImage(named: "5dice") {
+            blueCounter = blueCounter + 5
+        } else if playerTwoDice.image == UIImage(named: "6dice") {
+            blueCounter = blueCounter + 6
+        }
+        
+        if blueCounter > 99 {
+            blueCounter = blueCounterOld
+            blueArray[blueCounter].isHidden = false
+        } else if blueCounter == 99 {
+            print("player 2 won")
+            blueArray[blueCounter].isHidden = false
+            blueCounterOld = 99
+            let alert = UIAlertController(title: "WON", message: "Player 2 Won", preferredStyle: UIAlertController.Style.alert)
+            let ok = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil)
+            alert.addAction(ok)
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            print("blueCOunter = ", blueCounter)
+            blueArray[blueCounter - 1].isHidden = false
+            blueCounterOld = blueCounter - 1
+        }
+        
+        
+        arrow2.isHidden = true
+        arrow1.isHidden = false
     }
     
     func hideRedImages(){
